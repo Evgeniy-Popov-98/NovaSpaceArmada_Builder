@@ -1,7 +1,9 @@
+import { HeaderNavigation } from './components/HeaderNavigation/HeaderNavigation';
+
 import './App.css';
 
 function App() {
-  return;
+  return <HeaderNavigation />;
 }
 
 export default App;
