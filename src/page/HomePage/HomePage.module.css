@@ -1,0 +1,20 @@
+.homeContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.briefDetails {
+  width: 400px;
+  padding: 40px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.briefVideo {
+  width: 400px;
+  padding: 40px;
+  background-color: aqua;
+}
