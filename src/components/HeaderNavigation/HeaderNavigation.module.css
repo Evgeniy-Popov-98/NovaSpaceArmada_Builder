@@ -1,5 +1,6 @@
 .headerContainer {
   width: 1440px;
+  margin: 0 auto;
   padding: 10px 60px;
   display: flex;
   align-items: center;
@@ -27,7 +28,7 @@
   font-weight: 600;
   font-size: 20px;
   line-height: 120%;
-  color: var(--main-color);
+  color: black;
   cursor: pointer;
 }
 
