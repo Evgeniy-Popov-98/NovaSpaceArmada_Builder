@@ -1,21 +1,12 @@
 import { HeaderNavigation } from '../../components/HeaderNavigation/HeaderNavigation';
-
+import { ShipsCollection } from '../../components/ShipsCollection/ShipsCollection';
 export const BilderPage = () => {
   return (
     <>
       <HeaderNavigation />
       <div className="container">
         <div className="filter">
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
+          <ShipsCollection />
         </div>
         <div className="bilder"></div>
       </div>
