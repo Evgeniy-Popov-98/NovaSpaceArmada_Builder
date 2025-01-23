@@ -6,6 +6,8 @@ import { CatalogShipItem } from '../CatalogShipItem/CatalogShipItem';
 import { fetchShips } from '../../redux/ship/operations';
 import { selectAllShips } from '../../redux/ship/selector';
 
+import css from './ShipsCollection.module.css';
+
 export const ShipsCollection = () => {
   const dispatch = useDispatch();
   const allShips = useSelector(selectAllShips);
@@ -16,9 +18,9 @@ export const ShipsCollection = () => {
 
   return (
     <>
-      <h3>Spaceships</h3>
-      <div>
-        <div>
+      <h3 className={css.filterTitle}>Spaceships</h3>
+      <div className={css.boxShips}>
+        <div className={css.boxFilter}>
           <ul>
             <li>
               <a href="">All</a>
@@ -40,11 +42,11 @@ export const ShipsCollection = () => {
             </li>
           </ul>
         </div>
-        <div>
-          <ul>
+        <div className={css.boxCollectionShips}>
+          <ul className={css.shipsList}>
             {Array.isArray(allShips) &&
               allShips.map(ship => (
-                <li key={ship._id}>
+                <li key={ship._id} className={css.shipItem}>
                   <CatalogShipItem item={ship} />
                 </li>
               ))}

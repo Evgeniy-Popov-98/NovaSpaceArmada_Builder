@@ -1,0 +1,26 @@
+.filterTitle {
+  padding: 15px 0;
+  text-align: center;
+}
+
+.boxShips {
+  display: flex;
+  gap: 10px;
+}
+
+.boxFilter {
+  padding: 10px;
+}
+
+.shipsList {
+  height: 650px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.shipItem {
+  width: 100px;
+}
