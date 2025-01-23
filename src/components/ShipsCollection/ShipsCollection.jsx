@@ -1,19 +1,18 @@
-import axios from 'axios';
+import { useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
-import { useEffect, useState } from 'react';
 import { CatalogShipItem } from '../CatalogShipItem/CatalogShipItem';
+import { fetchShips } from '../../redux/ship/operations';
+import { selectAllShips } from '../../redux/ship/selector';
 
 export const ShipsCollection = () => {
-  const [ships, setShips] = useState([]);
+  const dispatch = useDispatch();
+  const allShips = useSelector(selectAllShips);
 
   useEffect(() => {
-    async function fetchShips() {
-      const { data } = await axios.get('http://localhost:3000/ships');
-
-      setShips(data.data);
-    }
-    fetchShips();
-  }, []);
+    dispatch(fetchShips());
+  }, [dispatch]);
 
   return (
     <>
@@ -43,8 +42,8 @@ export const ShipsCollection = () => {
         </div>
         <div>
           <ul>
-            {Array.isArray(ships) &&
-              ships.map(ship => (
+            {Array.isArray(allShips) &&
+              allShips.map(ship => (
                 <li key={ship._id}>
                   <CatalogShipItem item={ship} />
                 </li>
