@@ -2,7 +2,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: `http://localhost:3000`,
+  baseURL: `https://novaspacearmada-backend.onrender.com`,
 });
 
 export const fetchShips = createAsyncThunk(
