@@ -16,7 +16,7 @@ export const BilderPage = () => {
         <div className={css.bilder}>
           <AdmiralFormations />
         </div>
-        <div>
+        <div className={css.admiralInfo}>
           <AdmiralInfo />
         </div>
       </div>
